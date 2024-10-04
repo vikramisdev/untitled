@@ -2,7 +2,7 @@ import "./App.css"
 
 function FaqButton(props) {
     return(
-        <div className="w-768px mb-12">
+        <div className="md:w-768px mb-12">
             <details>
                 <p className="text-wrap">{props.content}</p>
                 <summary className="text-xl">{props.summary}</summary>

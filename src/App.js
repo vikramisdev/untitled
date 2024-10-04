@@ -7,9 +7,9 @@ import FooterLinks from "./FooterLinks";
 
 function App() {
   return (
-    <div>
-      <header className="flex pl-20 pr-20 pt-5 pb-5 items-center">
-        <div className="flex h-8 pl-8 pr-8 justify-between w-full">
+    <div className="w-full">
+      <header className="flex md:pl-20 md:pr-20 pt-5 pb-5 items-center">
+        <div className="flex h-8 pl-8 pr-8 justify-between w-full items-center">
           <nav className="flex">
             <div className="flex items-center gap-2 mr-10">
               <img
@@ -20,7 +20,7 @@ function App() {
               <img className="h-4" src="/images/Vector.svg" alt="logo"></img>
             </div>
 
-            <ul className="flex items-center gap-8">
+            <ul className="md:flex items-center gap-8 hidden md:visible">
               <li className="cursor-pointer font-semibold">Home</li>
               <details>
                 <summary className="cursor-pointer font-semibold">
@@ -37,15 +37,20 @@ function App() {
           </nav>
 
           <img
-            className="h-8 w-8 rounded-full cursor-pointer"
+            className="h-8 w-8 rounded-full cursor-pointer hidden md:block"
             src="/images/avatar.png"
             alt="logo"
           ></img>
+
+          <i className="bi bi-list md:hidden"></i>
         </div>
       </header>
+
       <hr className="w-full"></hr>
+
       <div className="w-full m-auto mt-24">
-        <div className="flex w-full justify-center">
+
+        <div className="flex md:w-full justify-center">
           <div className="flex justify-center items-center gap-2 pl-2 pr-2 pt-1 pb-1 w-fit bg-primary bg-opacity-35 border-purple-300 border rounded-full text-sm font-medium">
             <h2 className="bg-white pl-3 pr-3 pt-1 pb-1 border rounded-full text-sm font-medium text-purple-800">
               New feature
@@ -54,6 +59,7 @@ function App() {
             <i class="bi bi-arrow-right text-purple-800"></i>
           </div>
         </div>
+
         <h2 className="text-center text-6xl font-semibold custom-letter-spacing m-4">
           Beautiful analytics to grow smarter
         </h2>
@@ -63,23 +69,34 @@ function App() {
           <br /> and retain more users. Trusted by over 4,000 startups.
         </p>
       </div>
-      <div className="flex gap-3 justify-center m-10">
-        <button className="flex h-16 w-36 rounded-lg border border-gray-300 items-center justify-center gap-2 font-semibold">
+
+      <div className="md:flex gap-3 justify-center m-5">
+        <button className="flex h-16 w-full md:w-36 rounded-lg border border-gray-300 items-center justify-center gap-2 font-semibold">
           <i className="bi bi-play-circle"></i>Demo
         </button>
-        <button className="h-16 w-36 rounded-lg bg-purple-700 text-white font-semibold">
+        <button className="h-16 w-full md:w-36 mt-5 md:mt-0 rounded-lg bg-purple-700 text-white font-semibold">
           Sign Up
         </button>
       </div>
-      <div className="ml-28 mr-28 rounded-2xl border-8 border-black">
-        <img className="w-fit m-4" src="/images/screen.svg" alt="screen"></img>
+      <div className="md:ml-28 md:mr-28 ml-5 mr-5 mt-20 rounded-2xl border-8 border-black">
+        <img
+          className="w-fit hidden md:block rounded-2xl"
+          src="/images/screen.svg"
+          alt="screen"
+        ></img>
+        <img
+          className="w-full md:hidden rounded-2xl"
+          src="/images/screen-mobile.svg"
+          alt="screen"
+        ></img>
       </div>
       <hr className="text-center ml-28 mr-28"></hr>
-      <div className="ml-28 mr-28 mt-24">
+
+      <div className="md:ml-28 md:mr-28 md:mt-24 ml-10 mr-10 mt-20">
         <h3 className="text-center font-medium text-base">
           Join 4,000+ companies already growing
         </h3>
-        <div className="flex justify-center gap-8 mt-8">
+        <div className="md:justify-center gap-8 mt-8 grid grid-cols-2 md:flex">
           <img src="/images/company_logo.svg" alt="company logo"></img>
           <img src="/images/company_logo1.svg" alt="company logo"></img>
           <img src="/images/company_logo2.svg" alt="company logo"></img>
@@ -89,7 +106,7 @@ function App() {
         </div>
       </div>
 
-      <div className="text-center ml-28 mr-28 mt-40 mb-20">
+      <div className="text-center md:ml-28 md:mr-28 md:mt-40 md:mb-20 mx-5 mt-24">
         <h2 className="font-medium text-base text-purple-800 m-4">Features</h2>
         <h1 className="font-semibold text-4xl mb-7 custom-letter-spacing">
           Analytics that feels like it’s from the future
@@ -101,7 +118,7 @@ function App() {
         </p>
       </div>
 
-      <div className="grid sjustify-center grid-cols-3 ml-48 mr-48 mt-28 gap-20">
+      <div className="grid justify-center md:grid-cols-3 md:md:ml-48 md:md:mr-48 mt-28 gap-20 mx-5">
         <Card
           imgSrc="/images/message-chat.svg"
           title="Share team inboxes"
@@ -134,7 +151,7 @@ function App() {
         />
       </div>
 
-      <div className="mt-32 pt-28 pb-28 candice-wu">
+      <div className="md:mt-32 md:pt-28 md:pb-28 mt-12 pt-14 pb-14 pl-5 pr-5 candice-wu">
         <div className="w-full flex justify-center mb-10">
           <img
             className=""
@@ -142,7 +159,7 @@ function App() {
             alt="sisyphus logo"
           ></img>
         </div>
-        <h2 className="font-semibold text-6xl text-center custom-letter-spacing">
+        <h2 className="font-semibold md:text-6xl text-4xl text-center custom-letter-spacing">
           We’ve been using Untitled to kick start every new
           <br /> project and can’t imagine working without it.
         </h2>
@@ -157,23 +174,32 @@ function App() {
         <h2 className="text-center">Product Manager, Sisyphus</h2>
       </div>
 
-      <div className="text-center ml-48 mr-48 mt-32">
+      <div className="text-center md:ml-48 md:mr-48 md:mt-32 mt-14 mb-14 ml-5 mr-5">
         <h2 className="m-auto mb-5 w-fit font-semibold text-base px-3 py-1 border border-purple-700 rounded-full text-purple-600 border-opacity-40 bg-purple-200 bg-opacity-40">
           Features
         </h2>
-        <h className="font-semibold text-5xl">
+        <h className="font-semibold text-4xl md:text-5xl">
           Cutting-edge features for advanced analytics
         </h>
-        <p className="m-7 font-normal text-xl custom-text-gray">
+        <p className="md:m-7 mt-4 font-normal text-xl custom-text-gray">
           Powerful, self-serve product and growth analytics to help you convert,
           engage,
           <br /> and retain more users. Trusted by over 4,000 startups.
         </p>
       </div>
 
-      <img className="w-full" src="/images/content.svg" alt="content"></img>
+      <img
+        className="w-full hidden md:block"
+        src="/images/content.svg"
+        alt="content"
+      ></img>
+      <img
+        className="md:hidden mx-16"
+        src="/images/content-mobile.svg"
+        alt="content"
+      ></img>
 
-      <div className="grid grid-cols-3 gap-28 ml-48 mr-48 mb-28">
+      <div className="grid md:grid-cols-3 gap-10 md:gap-28 md:md:ml-48 md:md:mr-48 mb-12 md:mb-28 mt-12 mx-5">
         <ButtonCard
           imgSrc="/images/message-chat.svg"
           title="Share team inboxes"
@@ -199,7 +225,8 @@ function App() {
           Everything you need to know about the product and billing.
         </h2>
       </div>
-      <div className="ml-48 mr-48 mt-5 flex justify-center font-semibold text-lg">
+
+      <div className="md:ml-48 md:mr-48 mx-5 mt-5 flex justify-center font-semibold text-lg">
         <div>
           <FaqButton
             summary="Is there a free trial available?"
@@ -221,7 +248,7 @@ function App() {
         </div>
       </div>
 
-      <div className="ml-48 mr-48 mt-28 mb-28 text-center">
+      <div className="md:ml-48 md:mr-48 md:mt-28 md:mb-28 mt-12 mb-12 text-center">
         <div className="p-10 bg bg-avatar-group rounded-2xl w-full">
           <div className="flex justify-center">
             <img
@@ -241,7 +268,7 @@ function App() {
         </div>
       </div>
 
-      <div className="flex justify-between ml-48 mr-48 mb-28">
+      <div className="flex justify-between md:ml-48 md:mr-48 md:mb-28 m-5">
         <div>
           <h1 className="text-purple-600 font-semibold text-base">Our blog</h1>
           <h1 className="mt-2 text-4xl font-semibold">Lastest blog posts</h1>
@@ -250,12 +277,12 @@ function App() {
           </h1>
         </div>
 
-        <button className="px-5 py-3 bg-purple-600 text-white rounded-lg mt-2 h-12">
+        <button className="hidden md:visible px-5 py-3 bg-purple-600 text-white rounded-lg mt-2 h-12">
           View all posts
         </button>
       </div>
 
-      <div className="grid grid-cols-3 ml-48 mr-48 mb-28 gap-x-10">
+      <div className="grid md:grid-cols-3 md:ml-48 md:mr-48 md:mb-28 mb-10 md:gap-x-10 md:gap-y-12">
         <BlogPostCard
           imgSrc="/images/post1.svg"
           avatar="/images/avatar1.svg"
@@ -277,28 +304,32 @@ function App() {
           title="Building your API stack"
           description="The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them."
         />
+
+        <button className="md:hidden px-5 py-3 bg-purple-600 text-white rounded-lg m-5 h-12">
+          View all posts
+        </button>
       </div>
 
-      <div className="text-center mt-28 mb-28 bg-avatar-group pt-28 pb-20">
+      <div className="text-center md:mt-28 mb-28 bg-avatar-group pt-28 pb-20">
         <h1 className="font-semibold text-4xl custom-letter-spacing">
           Start your free trial
         </h1>
-        <h1 className="font-semibold text-xl custom-text-gray mt-5">
+        <h1 className="font-semibold md:text-xl custom-text-gray mt-5 mx-10">
           Join over 4,000+ startups already growing with Untitled.
         </h1>
 
-        <div className="flex gap-3 justify-center m-12">
-          <button className="flex h-16 w-36 rounded-lg border border-gray-300 items-center justify-center gap-2 font-semibold">
+        <div className="md:flex md:gap-3 md:justify-center md:m-12 mx-5 mt-10">
+          <button className="flex h-16 md:w-36 w-full rounded-lg border border-gray-300 items-center justify-center gap-2 font-semibold">
             Learn more
           </button>
-          <button className="h-16 w-36 rounded-lg bg-purple-700 text-white font-semibold">
+          <button className="h-16 md:w-36 w-full mt-5 md:mt-0 rounded-lg bg-purple-700 text-white font-semibold">
             Get started
           </button>
         </div>
       </div>
 
-      <div className="ml-48 mr-28 mt-28 mb-28">
-        <div className="grid grid-cols-6">
+      <div className="md:ml-48 md:mr-28 md:mt-28 md:mb-28 mx-5 md:mx-0">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-y-12">
           <FooterLinks
             title="Product"
             links={[
@@ -373,15 +404,17 @@ function App() {
         </div>
       </div>
 
-      <hr className="text-center ml-48 mr-48 mt-5"></hr>
+      <hr className="text-center md:ml-48 md:mr-48 mt-5"></hr>
 
-      <div className="ml-48 mr-48 flex justify-between py-12">
+      <div className="md:ml-48 md:mr-48 md:flex md:justify-between py-12 mx-5">
         <div className="flex items-center gap-2 mr-10">
           <img className="h-8 w-8" src="/images/Logomark.png" alt="logo"></img>
           <img className="h-4" src="/images/Vector.svg" alt="logo"></img>
         </div>
 
-        <h1 className="font-semibold opacity-80">© 2077 Untitled UI. All rights reserved.</h1>
+        <h1 className="font-semibold opacity-80 mt-5 md:mt-0">
+          © 2077 Untitled UI. All rights reserved.
+        </h1>
       </div>
     </div>
   );
